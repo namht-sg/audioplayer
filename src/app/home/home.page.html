@@ -1,0 +1,15 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Ruma Music Player
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list *ngFor="let track of playlist" (click)="start(track)">
+    <ion-label>
+      {{ track.name }}
+    </ion-label>
+  </ion-list>
+</ion-content>
