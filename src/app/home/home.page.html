@@ -19,30 +19,24 @@
 
 <ion-footer>
   <ion-toolbar class="go-center">
-    <ion-row>
-      <ion-col size="12" class="ion-text-center">
-        {{ activeTrack == null ? '' : activeTrack.name }}
-      </ion-col>
-      
-      <ion-col size="12">
-        <ion-range #range [(ngModel)]="progress" max="100" 
-         (touchend)="seek()" (click)="seek()" (mouseup)="seek()"></ion-range>
-      </ion-col>
-
-      <ion-col size="12">
-        <ion-button fill="clear" (click)="prev()" > 
-          <ion-icon slot="icon-only" name="play-skip-back"></ion-icon>
-        </ion-button>
-        <ion-button fill="clear" (click)="togglePlayer(false)" *ngIf="!isPlaying" > 
-          <ion-icon slot="icon-only" name="play"></ion-icon>
-        </ion-button>
-        <ion-button fill="clear" (click)="togglePlayer(true)" *ngIf="isPlaying" > 
-          <ion-icon slot="icon-only" name="pause"></ion-icon>
-        </ion-button>
-        <ion-button fill="clear" (click)="next()" > 
-          <ion-icon slot="icon-only" name="play-skip-forward"></ion-icon>
-        </ion-button>
-      </ion-col>
-    </ion-row>
+    <!-- Seek bar -->
+    <ion-range size="small" #range [(ngModel)]="progress" max="100" 
+      (touchend)="seek()" (mouseup)="seek()" (click)="seek()" (ionBlur)="seek()" ></ion-range>
+    <!-- Back button -->
+    <ion-button size="small" fill="clear"  (click)="prev()" > 
+      <ion-icon slot="icon-only" name="play-skip-back"  ></ion-icon>
+    </ion-button>
+    <!-- Play button -->
+    <ion-button size="large" fill="clear" (click)="togglePlayer(false)" *ngIf="!isPlaying" > 
+      <ion-icon slot="icon-only" name="play"></ion-icon>
+    </ion-button>
+    <!-- Pause button -->
+    <ion-button size="large" fill="clear" (click)="togglePlayer(true)" *ngIf="isPlaying" > 
+      <ion-icon slot="icon-only" name="pause"></ion-icon>
+    </ion-button>
+    <!-- Next button -->
+    <ion-button size="small" fill="clear" (click)="next()" > 
+      <ion-icon slot="icon-only" name="play-skip-forward"></ion-icon>
+    </ion-button>
   </ion-toolbar>
 </ion-footer>

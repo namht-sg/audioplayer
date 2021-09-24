@@ -35,7 +35,7 @@ export class HomePage {
   isPlaying = false;
   progress = 0;
   @ViewChild('range', {static: false})  range: IonRange;
-
+  
   constructor() {}
 
   start(track: Track) {
@@ -54,6 +54,7 @@ export class HomePage {
 
       onend: () => {
         console.log("on end....");
+        this.next();
       }
     });
 
@@ -89,13 +90,23 @@ export class HomePage {
       this.start(this.playlist[this.playlist.length - 1]);
     }
   }
-
+  
+  seekCount = 0;
   seek() {
-    if(this.activeTrack != null) {
+    this.seekCount++;
+    // console.log("--------" + this.seekCount);
+    if(this.activeTrack != null && this.seekCount == 1) {
+      console.log("seek...")
       let newValue = +this.range.value;
       let duration = this.player.duration();
       this.player.seek(duration * newValue / 100)
     }
+    setTimeout( () => {
+      if(this.seekCount > 0) {
+        this.seekCount = 0;
+      }
+    }, 500)
+    
   }
 
   updateProgress() {
