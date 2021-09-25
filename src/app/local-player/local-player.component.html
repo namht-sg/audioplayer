@@ -1,0 +1,41 @@
+<ion-header [translucent]="true" class="go-center">
+  <ion-toolbar>
+    <ion-title>
+      Ruma Music Player
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="go-center">
+  <ion-content>
+    <ion-list *ngFor="let track of playlist" (click)="start(track)" >
+      <ion-label style="cursor: pointer;" [color]="track == activeTrack ? 'success' : 'gray'">
+        {{ track.name }}
+      </ion-label>
+    </ion-list>
+  </ion-content>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar class="go-center">
+    <!-- Seek bar -->
+    <ion-range size="small" #range [(ngModel)]="progress" max="100" 
+      (touchend)="seek()" (mouseup)="seek()" (click)="seek()" (ionBlur)="seek()" ></ion-range>
+    <!-- Back button -->
+    <ion-button size="small" fill="clear"  (click)="prev()" > 
+      <ion-icon slot="icon-only" name="play-skip-back"  ></ion-icon>
+    </ion-button>
+    <!-- Play button -->
+    <ion-button size="large" fill="clear" (click)="togglePlayer(false)" *ngIf="!isPlaying" > 
+      <ion-icon slot="icon-only" name="play"></ion-icon>
+    </ion-button>
+    <!-- Pause button -->
+    <ion-button size="large" fill="clear" (click)="togglePlayer(true)" *ngIf="isPlaying" > 
+      <ion-icon slot="icon-only" name="pause"></ion-icon>
+    </ion-button>
+    <!-- Next button -->
+    <ion-button size="small" fill="clear" (click)="next()" > 
+      <ion-icon slot="icon-only" name="play-skip-forward"></ion-icon>
+    </ion-button>
+  </ion-toolbar>
+</ion-footer>
