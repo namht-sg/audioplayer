@@ -6,6 +6,7 @@ import { HomePage } from './home.page';
 
 import { HomePageRoutingModule } from './home-routing.module';
 import { LocalPlayerComponent } from '../local-player/local-player.component';
+import { StreamClientComponent } from '../stream-client/stream-client.component';
 
 @NgModule({
   imports: [
@@ -14,6 +15,6 @@ import { LocalPlayerComponent } from '../local-player/local-player.component';
     IonicModule,
     HomePageRoutingModule
   ],
-  declarations: [HomePage, LocalPlayerComponent]
+  declarations: [HomePage, LocalPlayerComponent, StreamClientComponent]
 })
 export class HomePageModule {}

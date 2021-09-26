@@ -16,24 +16,38 @@ export class LocalPlayerComponent implements OnInit {
 
   playlist: Track[] = [
     {
-      name: 'Nho Dem Gia Ban',
+      name: 'Nhớ Đêm Gia Bạn',
       path: 'assets/mp3/V13_08. Nho Dem Gia Ban.mp3'
     },
     {
-      name: 'Ve Que',
+      name: 'Về Quê',
       path: 'assets/mp3/V13_09. Ve Que.mp3'
     },
     {
-      name: 'Nguoi O Dung Ve',
+      name: 'Người Ở Đừng Về',
       path: 'assets/mp3/V13_10. Nguoi O Dung Ve.mp3'
+    },
+    {
+      name: 'Gió Đánh Đò Đưa',
+      path: 'assets/mp3/V13_05. Gio Danh Do Dua.mp3'
+    },
+    {
+      name: 'Hội Làng',
+      path: 'assets/mp3/V13_06. Hoi Lang.mp3'
+    },
+    {
+      name: 'Khúc Hát Sông Quê',
+      path: 'assets/mp3/V13_07. Khuc Hat Song Que.mp3'
     }
   ];
+  
+  @ViewChild('range', {static: false})  range: IonRange;
 
   activeTrack: Track = null;
   player: Howl = null;
+  isDragging = false;
   isPlaying = false;
   progress = 0;
-  @ViewChild('range', {static: false})  range: IonRange;
   
   constructor() { }
 
@@ -111,10 +125,15 @@ export class LocalPlayerComponent implements OnInit {
   }
 
   updateProgress() {
+
     let seek = this.player.seek();
     this.progress = seek / this.player.duration() * 100
     setTimeout( () => {
       this.updateProgress()
     }, 500)
+  }
+
+  onProgressChangeEnd(msg:string) {
+    console.log("=====" + msg)
   }
 }

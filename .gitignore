@@ -1,0 +1,10 @@
+node_modules
+.tmp
+.sass-cache
+**/bower_components
+lib/**
+platforms
+*.swp
+*.swo
+*.log
+*.DS_Store
