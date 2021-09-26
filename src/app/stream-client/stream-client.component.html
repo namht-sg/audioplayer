@@ -1,3 +1,22 @@
-<p>
-  stream-client works!
-</p>
+<h3 class="go-center"> Streaming Clients </h3>
+
+  <ion-grid class="go-center">
+    <ion-row>
+      <ion-col>
+        <ion-textarea [(ngModel)]="audioURL" placeholder="Paste the link">
+        </ion-textarea>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <!-- Play button -->
+      <ion-button size="large" fill="clear" (click)="streamAudio(false)" *ngIf="!isPlaying" > 
+        <ion-icon slot="icon-only" name="play"></ion-icon>
+      </ion-button>
+      <!-- Pause button -->
+      <ion-button size="large" fill="clear" (click)="streamAudio(true)" *ngIf="isPlaying" > 
+        <ion-icon slot="icon-only" name="pause"></ion-icon>
+      </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>

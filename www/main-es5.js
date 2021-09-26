@@ -174,31 +174,31 @@
       /* harmony import */
 
 
-      var tslib__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+      var tslib__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
       /*! tslib */
       61855);
       /* harmony import */
 
 
-      var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+      var _angular_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
       /*! @angular/core */
       42741);
       /* harmony import */
 
 
-      var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+      var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
       /*! @angular/platform-browser */
       93220);
       /* harmony import */
 
 
-      var _angular_router__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+      var _angular_router__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
       /*! @angular/router */
       29535);
       /* harmony import */
 
 
-      var _ionic_angular__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+      var _ionic_angular__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
       /*! @ionic/angular */
       34595);
       /* harmony import */
@@ -213,19 +213,25 @@
       var _app_routing_module__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
       /*! ./app-routing.module */
       70809);
+      /* harmony import */
+
+
+      var _ionic_native_streaming_media_ngx__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+      /*! @ionic-native/streaming-media/ngx */
+      16044);
 
       var _AppModule = function AppModule() {
         _classCallCheck(this, AppModule);
       };
 
-      _AppModule = (0, tslib__WEBPACK_IMPORTED_MODULE_2__.__decorate)([(0, _angular_core__WEBPACK_IMPORTED_MODULE_3__.NgModule)({
+      _AppModule = (0, tslib__WEBPACK_IMPORTED_MODULE_3__.__decorate)([(0, _angular_core__WEBPACK_IMPORTED_MODULE_4__.NgModule)({
         declarations: [_app_component__WEBPACK_IMPORTED_MODULE_0__.AppComponent],
         entryComponents: [],
-        imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_4__.BrowserModule, _ionic_angular__WEBPACK_IMPORTED_MODULE_5__.IonicModule.forRoot(), _app_routing_module__WEBPACK_IMPORTED_MODULE_1__.AppRoutingModule],
+        imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_5__.BrowserModule, _ionic_angular__WEBPACK_IMPORTED_MODULE_6__.IonicModule.forRoot(), _app_routing_module__WEBPACK_IMPORTED_MODULE_1__.AppRoutingModule],
         providers: [{
-          provide: _angular_router__WEBPACK_IMPORTED_MODULE_6__.RouteReuseStrategy,
-          useClass: _ionic_angular__WEBPACK_IMPORTED_MODULE_5__.IonicRouteStrategy
-        }],
+          provide: _angular_router__WEBPACK_IMPORTED_MODULE_7__.RouteReuseStrategy,
+          useClass: _ionic_angular__WEBPACK_IMPORTED_MODULE_6__.IonicRouteStrategy
+        }, _ionic_native_streaming_media_ngx__WEBPACK_IMPORTED_MODULE_2__.StreamingMedia],
         bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_0__.AppComponent]
       })], _AppModule);
       /***/

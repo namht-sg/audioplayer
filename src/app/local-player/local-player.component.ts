@@ -10,8 +10,9 @@ export interface Track {
 @Component({
   selector: 'app-local-player',
   templateUrl: './local-player.component.html',
-  styleUrls: ['./local-player.component.scss'],
+  styleUrls: ['./local-player.component.scss', '../home/home.page.scss'],
 })
+
 export class LocalPlayerComponent implements OnInit {
 
   playlist: Track[] = [
@@ -125,15 +126,10 @@ export class LocalPlayerComponent implements OnInit {
   }
 
   updateProgress() {
-
     let seek = this.player.seek();
     this.progress = seek / this.player.duration() * 100
     setTimeout( () => {
       this.updateProgress()
     }, 500)
-  }
-
-  onProgressChangeEnd(msg:string) {
-    console.log("=====" + msg)
   }
 }

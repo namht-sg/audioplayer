@@ -7,4 +7,4 @@ platforms
 *.swp
 *.swo
 *.log
-*.DS_Store
+**/*.DS_Store
