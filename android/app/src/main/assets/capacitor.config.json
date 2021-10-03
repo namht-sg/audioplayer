@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "audioplayer",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}

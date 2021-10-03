@@ -3384,12 +3384,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "LocalPlayerComponent": function() { return /* binding */ LocalPlayerComponent; }
 /* harmony export */ });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! tslib */ 61855);
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! tslib */ 61855);
 /* harmony import */ var _raw_loader_local_player_component_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !raw-loader!./local-player.component.html */ 47897);
 /* harmony import */ var _local_player_component_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./local-player.component.scss */ 79461);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ 42741);
-/* harmony import */ var howler__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! howler */ 39559);
-/* harmony import */ var howler__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(howler__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _home_home_page_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../home/home.page.scss */ 2610);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/core */ 42741);
+/* harmony import */ var howler__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! howler */ 39559);
+/* harmony import */ var howler__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(howler__WEBPACK_IMPORTED_MODULE_3__);
+
 
 
 
@@ -3435,7 +3437,7 @@ let LocalPlayerComponent = class LocalPlayerComponent {
         if (this.player) {
             this.player.stop();
         }
-        this.player = new howler__WEBPACK_IMPORTED_MODULE_2__.Howl({
+        this.player = new howler__WEBPACK_IMPORTED_MODULE_3__.Howl({
             src: [track.path],
             onplay: () => {
                 console.log("on play....");
@@ -3505,13 +3507,13 @@ let LocalPlayerComponent = class LocalPlayerComponent {
 };
 LocalPlayerComponent.ctorParameters = () => [];
 LocalPlayerComponent.propDecorators = {
-    range: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_3__.ViewChild, args: ['range', { static: false },] }]
+    range: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_4__.ViewChild, args: ['range', { static: false },] }]
 };
-LocalPlayerComponent = (0,tslib__WEBPACK_IMPORTED_MODULE_4__.__decorate)([
-    (0,_angular_core__WEBPACK_IMPORTED_MODULE_3__.Component)({
+LocalPlayerComponent = (0,tslib__WEBPACK_IMPORTED_MODULE_5__.__decorate)([
+    (0,_angular_core__WEBPACK_IMPORTED_MODULE_4__.Component)({
         selector: 'app-local-player',
         template: _raw_loader_local_player_component_html__WEBPACK_IMPORTED_MODULE_0__.default,
-        styles: [_local_player_component_scss__WEBPACK_IMPORTED_MODULE_1__.default]
+        styles: [_local_player_component_scss__WEBPACK_IMPORTED_MODULE_1__.default, _home_home_page_scss__WEBPACK_IMPORTED_MODULE_2__.default]
     })
 ], LocalPlayerComponent);
 
@@ -3530,11 +3532,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "StreamClientComponent": function() { return /* binding */ StreamClientComponent; }
 /* harmony export */ });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! tslib */ 61855);
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! tslib */ 61855);
 /* harmony import */ var _raw_loader_stream_client_component_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !raw-loader!./stream-client.component.html */ 81354);
 /* harmony import */ var _stream_client_component_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./stream-client.component.scss */ 8756);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/core */ 42741);
-/* harmony import */ var _ionic_native_streaming_media_ngx__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @ionic-native/streaming-media/ngx */ 16044);
+/* harmony import */ var _home_home_page_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../home/home.page.scss */ 2610);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/core */ 42741);
+/* harmony import */ var _ionic_native_streaming_media_ngx__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @ionic-native/streaming-media/ngx */ 16044);
+
 
 
 
@@ -3544,23 +3548,27 @@ let StreamClientComponent = class StreamClientComponent {
     constructor(stream) {
         this.stream = stream;
         this.audioURL = "";
+        this.isPlaying = false;
     }
     ngOnInit() { }
-    streamAudio() {
-        var option = {
-            bgColor: "black"
-        };
-        this.stream.playAudio(this.audioURL, option);
+    streamAudio(play) {
+        if (this.isPlaying) {
+            this.stream.pauseAudio();
+        }
+        else {
+            this.stream.playAudio(this.audioURL);
+        }
+        this.isPlaying = !play;
     }
 };
 StreamClientComponent.ctorParameters = () => [
-    { type: _ionic_native_streaming_media_ngx__WEBPACK_IMPORTED_MODULE_2__.StreamingMedia }
+    { type: _ionic_native_streaming_media_ngx__WEBPACK_IMPORTED_MODULE_3__.StreamingMedia }
 ];
-StreamClientComponent = (0,tslib__WEBPACK_IMPORTED_MODULE_3__.__decorate)([
-    (0,_angular_core__WEBPACK_IMPORTED_MODULE_4__.Component)({
+StreamClientComponent = (0,tslib__WEBPACK_IMPORTED_MODULE_4__.__decorate)([
+    (0,_angular_core__WEBPACK_IMPORTED_MODULE_5__.Component)({
         selector: 'app-stream-client',
         template: _raw_loader_stream_client_component_html__WEBPACK_IMPORTED_MODULE_0__.default,
-        styles: [_stream_client_component_scss__WEBPACK_IMPORTED_MODULE_1__.default]
+        styles: [_stream_client_component_scss__WEBPACK_IMPORTED_MODULE_1__.default, _home_home_page_scss__WEBPACK_IMPORTED_MODULE_2__.default]
     })
 ], StreamClientComponent);
 
@@ -3588,7 +3596,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = (".go-center {\n  text-align: center;\n  left: 0;\n  right: 0;\n  padding: 0;\n}\n\n.list-display {\n  cursor: pointer;\n  max-height: 800px;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImxvY2FsLXBsYXllci5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLGtCQUFBO0VBQ0EsT0FBQTtFQUNBLFFBQUE7RUFDQSxVQUFBO0FBQ0o7O0FBRUU7RUFDRSxlQUFBO0VBQ0EsaUJBQUE7QUFDSiIsImZpbGUiOiJsb2NhbC1wbGF5ZXIuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuZ28tY2VudGVyIHtcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gICAgbGVmdDogMDtcbiAgICByaWdodDogMDtcbiAgICBwYWRkaW5nOiAwO1xuICB9XG4gIFxuICAubGlzdC1kaXNwbGF5IHtcbiAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgbWF4LWhlaWdodDogODAwcHg7XG4gIH0iXX0= */");
+/* harmony default export */ __webpack_exports__["default"] = (".list-display {\n  cursor: pointer;\n  max-height: 800px;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImxvY2FsLXBsYXllci5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLGVBQUE7RUFDQSxpQkFBQTtBQUNGIiwiZmlsZSI6ImxvY2FsLXBsYXllci5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5saXN0LWRpc3BsYXkge1xuICBjdXJzb3I6IHBvaW50ZXI7XG4gIG1heC1oZWlnaHQ6IDgwMHB4O1xufSJdfQ== */");
 
 /***/ }),
 
@@ -3612,7 +3620,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n<app-local-player></app-local-player>\n<app-stream-client></app-stream-client>");
+/* harmony default export */ __webpack_exports__["default"] = ("<ion-content>\n  <app-local-player></app-local-player>\n</ion-content>\n<ion-content>\n  <app-stream-client></app-stream-client>\n</ion-content>");
 
 /***/ }),
 
@@ -3624,7 +3632,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<ion-header [translucent]=\"true\" class=\"go-center\">\n  <ion-toolbar>\n    <ion-title>\n      Ruma Music Player\n    </ion-title>\n  </ion-toolbar>\n</ion-header>\n<ion-content class=\"list-display\">\n  <ion-list *ngFor=\"let track of playlist; let i = index \" [attr.data-index]=\"i\" (click)=\"start(track)\" >\n    <ion-label class=\"list-display\" [color]=\"track == activeTrack ? 'success' : 'gray'\">\n      {{ i +1 }} - {{ track.name }}\n    </ion-label>\n  </ion-list>\n</ion-content>\n<ion-toolbar class=\"go-center\">\n<!-- Seek bar -->\n<ion-range size=\"small\" #range [(ngModel)]=\"progress\" max=\"100\" \n  (touchend)=\"seek()\" (mouseup)=\"seek()\"></ion-range>\n<!-- Back button -->\n<ion-button size=\"small\" fill=\"clear\"  (click)=\"prev()\" > \n  <ion-icon slot=\"icon-only\" name=\"play-skip-back\"  ></ion-icon>\n</ion-button>\n<!-- Play button -->\n<ion-button size=\"large\" fill=\"clear\" (click)=\"togglePlayer(false)\" *ngIf=\"!isPlaying\" > \n  <ion-icon slot=\"icon-only\" name=\"play\"></ion-icon>\n</ion-button>\n<!-- Pause button -->\n<ion-button size=\"large\" fill=\"clear\" (click)=\"togglePlayer(true)\" *ngIf=\"isPlaying\" > \n  <ion-icon slot=\"icon-only\" name=\"pause\"></ion-icon>\n</ion-button>\n<!-- Next button -->\n<ion-button size=\"small\" fill=\"clear\" (click)=\"next()\" > \n  <ion-icon slot=\"icon-only\" name=\"play-skip-forward\"></ion-icon>\n</ion-button>\n</ion-toolbar>");
+/* harmony default export */ __webpack_exports__["default"] = ("<ion-header [translucent]=\"true\" class=\"go-center\">\n  <ion-toolbar>\n    <ion-title>\n      Ruma Music Player\n    </ion-title>\n  </ion-toolbar>\n</ion-header>\n<ion-content class=\"list-display, go-center\">\n  <ion-list *ngFor=\"let track of playlist; let i = index \" [attr.data-index]=\"i\" (click)=\"start(track)\" >\n    <ion-label class=\"list-display\" [color]=\"track == activeTrack ? 'success' : 'gray'\">\n      {{ i +1 }} - {{ track.name }}\n    </ion-label>\n  </ion-list>\n</ion-content>\n<ion-toolbar class=\"go-center\">\n<!-- Seek bar -->\n<ion-range size=\"small\" #range [(ngModel)]=\"progress\" max=\"100\" \n  (touchend)=\"seek()\" (mouseup)=\"seek()\"></ion-range>\n<!-- Back button -->\n<ion-button size=\"small\" fill=\"clear\"  (click)=\"prev()\" > \n  <ion-icon slot=\"icon-only\" name=\"play-skip-back\"  ></ion-icon>\n</ion-button>\n<!-- Play button -->\n<ion-button size=\"large\" fill=\"clear\" (click)=\"togglePlayer(false)\" *ngIf=\"!isPlaying\" > \n  <ion-icon slot=\"icon-only\" name=\"play\"></ion-icon>\n</ion-button>\n<!-- Pause button -->\n<ion-button size=\"large\" fill=\"clear\" (click)=\"togglePlayer(true)\" *ngIf=\"isPlaying\" > \n  <ion-icon slot=\"icon-only\" name=\"pause\"></ion-icon>\n</ion-button>\n<!-- Next button -->\n<ion-button size=\"small\" fill=\"clear\" (click)=\"next()\" > \n  <ion-icon slot=\"icon-only\" name=\"play-skip-forward\"></ion-icon>\n</ion-button>\n</ion-toolbar>");
 
 /***/ }),
 
@@ -3636,7 +3644,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("Stream clients\n<ion-content>\n  <ion-grid>\n    <ion-row>\n      <ion-col>\n        <ion-textarea [(ngModel)]=\"audioURL\"></ion-textarea>\n      </ion-col>\n    </ion-row>\n    <ion-row>\n      <ion-col>\n        <ion-button (click)=\"streamAudio()\"></ion-button>\n      </ion-col>\n    </ion-row>\n  </ion-grid>\n</ion-content>");
+/* harmony default export */ __webpack_exports__["default"] = ("<h3 class=\"go-center\"> Streaming Clients </h3>\n\n  <ion-grid class=\"go-center\">\n    <ion-row>\n      <ion-col>\n        <ion-textarea [(ngModel)]=\"audioURL\" placeholder=\"Paste the link\">\n        </ion-textarea>\n      </ion-col>\n    </ion-row>\n    <ion-row>\n      <ion-col>\n        <!-- Play button -->\n      <ion-button size=\"large\" fill=\"clear\" (click)=\"streamAudio(false)\" *ngIf=\"!isPlaying\" > \n        <ion-icon slot=\"icon-only\" name=\"play\"></ion-icon>\n      </ion-button>\n      <!-- Pause button -->\n      <ion-button size=\"large\" fill=\"clear\" (click)=\"streamAudio(true)\" *ngIf=\"isPlaying\" > \n        <ion-icon slot=\"icon-only\" name=\"pause\"></ion-icon>\n      </ion-button>\n      </ion-col>\n    </ion-row>\n  </ion-grid>");
 
 /***/ })
 

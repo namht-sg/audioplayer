@@ -5,7 +5,7 @@
     </ion-title>
   </ion-toolbar>
 </ion-header>
-<ion-content class="list-display">
+<ion-content class="list-display, go-center">
   <ion-list *ngFor="let track of playlist; let i = index " [attr.data-index]="i" (click)="start(track)" >
     <ion-label class="list-display" [color]="track == activeTrack ? 'success' : 'gray'">
       {{ i +1 }} - {{ track.name }}

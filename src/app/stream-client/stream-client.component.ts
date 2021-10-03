@@ -18,13 +18,11 @@ export class StreamClientComponent implements OnInit {
   isPlaying:boolean = false;
  
   streamAudio(play:boolean) {
-    var option:StreamingAudioOptions = {
-      bgColor: "black"
-    }
+   
     if(this.isPlaying) {
       this.stream.pauseAudio();
     } else {
-      this.stream.playAudio(this.audioURL, option);
+      this.stream.playAudio(this.audioURL);
     }
     this.isPlaying = !play;
   }
