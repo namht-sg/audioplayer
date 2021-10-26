@@ -3253,130 +3253,10 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
 
 /***/ }),
 
-/***/ 65089:
-/*!*********************************************!*\
-  !*** ./src/app/home/home-routing.module.ts ***!
-  \*********************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "HomePageRoutingModule": function() { return /* binding */ HomePageRoutingModule; }
-/* harmony export */ });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! tslib */ 61855);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ 42741);
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ 29535);
-/* harmony import */ var _home_page__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./home.page */ 19460);
-
-
-
-
-const routes = [
-    {
-        path: '',
-        component: _home_page__WEBPACK_IMPORTED_MODULE_0__.HomePage,
-    }
-];
-let HomePageRoutingModule = class HomePageRoutingModule {
-};
-HomePageRoutingModule = (0,tslib__WEBPACK_IMPORTED_MODULE_1__.__decorate)([
-    (0,_angular_core__WEBPACK_IMPORTED_MODULE_2__.NgModule)({
-        imports: [_angular_router__WEBPACK_IMPORTED_MODULE_3__.RouterModule.forChild(routes)],
-        exports: [_angular_router__WEBPACK_IMPORTED_MODULE_3__.RouterModule]
-    })
-], HomePageRoutingModule);
-
-
-
-/***/ }),
-
-/***/ 82711:
-/*!*************************************!*\
-  !*** ./src/app/home/home.module.ts ***!
-  \*************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "HomePageModule": function() { return /* binding */ HomePageModule; }
-/* harmony export */ });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! tslib */ 61855);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/core */ 42741);
-/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/common */ 16274);
-/* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @ionic/angular */ 34595);
-/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/forms */ 93324);
-/* harmony import */ var _home_page__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./home.page */ 19460);
-/* harmony import */ var _home_routing_module__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./home-routing.module */ 65089);
-/* harmony import */ var _local_player_local_player_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../local-player/local-player.component */ 92208);
-/* harmony import */ var _stream_client_stream_client_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../stream-client/stream-client.component */ 61235);
-
-
-
-
-
-
-
-
-
-let HomePageModule = class HomePageModule {
-};
-HomePageModule = (0,tslib__WEBPACK_IMPORTED_MODULE_4__.__decorate)([
-    (0,_angular_core__WEBPACK_IMPORTED_MODULE_5__.NgModule)({
-        imports: [
-            _angular_common__WEBPACK_IMPORTED_MODULE_6__.CommonModule,
-            _angular_forms__WEBPACK_IMPORTED_MODULE_7__.FormsModule,
-            _ionic_angular__WEBPACK_IMPORTED_MODULE_8__.IonicModule,
-            _home_routing_module__WEBPACK_IMPORTED_MODULE_1__.HomePageRoutingModule
-        ],
-        declarations: [_home_page__WEBPACK_IMPORTED_MODULE_0__.HomePage, _local_player_local_player_component__WEBPACK_IMPORTED_MODULE_2__.LocalPlayerComponent, _stream_client_stream_client_component__WEBPACK_IMPORTED_MODULE_3__.StreamClientComponent]
-    })
-], HomePageModule);
-
-
-
-/***/ }),
-
-/***/ 19460:
-/*!***********************************!*\
-  !*** ./src/app/home/home.page.ts ***!
-  \***********************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "HomePage": function() { return /* binding */ HomePage; }
-/* harmony export */ });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! tslib */ 61855);
-/* harmony import */ var _raw_loader_home_page_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !raw-loader!./home.page.html */ 49764);
-/* harmony import */ var _home_page_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./home.page.scss */ 2610);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ 42741);
-
-
-
-
-let HomePage = class HomePage {
-    constructor() { }
-};
-HomePage.ctorParameters = () => [];
-HomePage = (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__decorate)([
-    (0,_angular_core__WEBPACK_IMPORTED_MODULE_3__.Component)({
-        selector: 'app-home',
-        template: _raw_loader_home_page_html__WEBPACK_IMPORTED_MODULE_0__.default,
-        styles: [_home_page_scss__WEBPACK_IMPORTED_MODULE_1__.default]
-    })
-], HomePage);
-
-
-
-/***/ }),
-
-/***/ 92208:
-/*!********************************************************!*\
-  !*** ./src/app/local-player/local-player.component.ts ***!
-  \********************************************************/
+/***/ 13260:
+/*!*******************************************************************!*\
+  !*** ./src/app/components/local-player/local-player.component.ts ***!
+  \*******************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3385,9 +3265,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "LocalPlayerComponent": function() { return /* binding */ LocalPlayerComponent; }
 /* harmony export */ });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! tslib */ 61855);
-/* harmony import */ var _raw_loader_local_player_component_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !raw-loader!./local-player.component.html */ 47897);
-/* harmony import */ var _local_player_component_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./local-player.component.scss */ 79461);
-/* harmony import */ var _home_home_page_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../home/home.page.scss */ 2610);
+/* harmony import */ var _raw_loader_local_player_component_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !raw-loader!./local-player.component.html */ 179);
+/* harmony import */ var _local_player_component_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./local-player.component.scss */ 44272);
+/* harmony import */ var _home_home_page_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../home/home.page.scss */ 2610);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/core */ 42741);
 /* harmony import */ var howler__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! howler */ 39559);
 /* harmony import */ var howler__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(howler__WEBPACK_IMPORTED_MODULE_3__);
@@ -3521,10 +3401,10 @@ LocalPlayerComponent = (0,tslib__WEBPACK_IMPORTED_MODULE_5__.__decorate)([
 
 /***/ }),
 
-/***/ 61235:
-/*!**********************************************************!*\
-  !*** ./src/app/stream-client/stream-client.component.ts ***!
-  \**********************************************************/
+/***/ 66406:
+/*!*********************************************************************!*\
+  !*** ./src/app/components/stream-client/stream-client.component.ts ***!
+  \*********************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3533,9 +3413,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "StreamClientComponent": function() { return /* binding */ StreamClientComponent; }
 /* harmony export */ });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! tslib */ 61855);
-/* harmony import */ var _raw_loader_stream_client_component_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !raw-loader!./stream-client.component.html */ 81354);
-/* harmony import */ var _stream_client_component_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./stream-client.component.scss */ 8756);
-/* harmony import */ var _home_home_page_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../home/home.page.scss */ 2610);
+/* harmony import */ var _raw_loader_stream_client_component_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !raw-loader!./stream-client.component.html */ 83271);
+/* harmony import */ var _stream_client_component_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./stream-client.component.scss */ 19821);
+/* harmony import */ var _home_home_page_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../home/home.page.scss */ 2610);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/core */ 42741);
 /* harmony import */ var _ionic_native_streaming_media_ngx__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @ionic-native/streaming-media/ngx */ 16044);
 
@@ -3548,17 +3428,10 @@ let StreamClientComponent = class StreamClientComponent {
     constructor(stream) {
         this.stream = stream;
         this.audioURL = "";
-        this.isPlaying = false;
     }
     ngOnInit() { }
-    streamAudio(play) {
-        if (this.isPlaying) {
-            this.stream.pauseAudio();
-        }
-        else {
-            this.stream.playAudio(this.audioURL);
-        }
-        this.isPlaying = !play;
+    streamAudio() {
+        this.stream.playAudio(this.audioURL);
     }
 };
 StreamClientComponent.ctorParameters = () => [
@@ -3576,6 +3449,150 @@ StreamClientComponent = (0,tslib__WEBPACK_IMPORTED_MODULE_4__.__decorate)([
 
 /***/ }),
 
+/***/ 65089:
+/*!*********************************************!*\
+  !*** ./src/app/home/home-routing.module.ts ***!
+  \*********************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "HomePageRoutingModule": function() { return /* binding */ HomePageRoutingModule; }
+/* harmony export */ });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! tslib */ 61855);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ 42741);
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ 29535);
+/* harmony import */ var _home_page__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./home.page */ 19460);
+
+
+
+
+const routes = [
+    {
+        path: '',
+        component: _home_page__WEBPACK_IMPORTED_MODULE_0__.HomePage,
+    }
+];
+let HomePageRoutingModule = class HomePageRoutingModule {
+};
+HomePageRoutingModule = (0,tslib__WEBPACK_IMPORTED_MODULE_1__.__decorate)([
+    (0,_angular_core__WEBPACK_IMPORTED_MODULE_2__.NgModule)({
+        imports: [_angular_router__WEBPACK_IMPORTED_MODULE_3__.RouterModule.forChild(routes)],
+        exports: [_angular_router__WEBPACK_IMPORTED_MODULE_3__.RouterModule]
+    })
+], HomePageRoutingModule);
+
+
+
+/***/ }),
+
+/***/ 82711:
+/*!*************************************!*\
+  !*** ./src/app/home/home.module.ts ***!
+  \*************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "HomePageModule": function() { return /* binding */ HomePageModule; }
+/* harmony export */ });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! tslib */ 61855);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/core */ 42741);
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/common */ 16274);
+/* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @ionic/angular */ 34595);
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/forms */ 93324);
+/* harmony import */ var _home_page__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./home.page */ 19460);
+/* harmony import */ var _home_routing_module__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./home-routing.module */ 65089);
+/* harmony import */ var _components_local_player_local_player_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/local-player/local-player.component */ 13260);
+/* harmony import */ var _components_stream_client_stream_client_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/stream-client/stream-client.component */ 66406);
+
+
+
+
+
+
+
+
+
+let HomePageModule = class HomePageModule {
+};
+HomePageModule = (0,tslib__WEBPACK_IMPORTED_MODULE_4__.__decorate)([
+    (0,_angular_core__WEBPACK_IMPORTED_MODULE_5__.NgModule)({
+        imports: [
+            _angular_common__WEBPACK_IMPORTED_MODULE_6__.CommonModule,
+            _angular_forms__WEBPACK_IMPORTED_MODULE_7__.FormsModule,
+            _ionic_angular__WEBPACK_IMPORTED_MODULE_8__.IonicModule,
+            _home_routing_module__WEBPACK_IMPORTED_MODULE_1__.HomePageRoutingModule
+        ],
+        declarations: [_home_page__WEBPACK_IMPORTED_MODULE_0__.HomePage, _components_local_player_local_player_component__WEBPACK_IMPORTED_MODULE_2__.LocalPlayerComponent, _components_stream_client_stream_client_component__WEBPACK_IMPORTED_MODULE_3__.StreamClientComponent]
+    })
+], HomePageModule);
+
+
+
+/***/ }),
+
+/***/ 19460:
+/*!***********************************!*\
+  !*** ./src/app/home/home.page.ts ***!
+  \***********************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "HomePage": function() { return /* binding */ HomePage; }
+/* harmony export */ });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! tslib */ 61855);
+/* harmony import */ var _raw_loader_home_page_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !raw-loader!./home.page.html */ 49764);
+/* harmony import */ var _home_page_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./home.page.scss */ 2610);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ 42741);
+
+
+
+
+let HomePage = class HomePage {
+    constructor() { console.log("home........"); }
+};
+HomePage.ctorParameters = () => [];
+HomePage = (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__decorate)([
+    (0,_angular_core__WEBPACK_IMPORTED_MODULE_3__.Component)({
+        selector: 'app-home',
+        template: _raw_loader_home_page_html__WEBPACK_IMPORTED_MODULE_0__.default,
+        styles: [_home_page_scss__WEBPACK_IMPORTED_MODULE_1__.default]
+    })
+], HomePage);
+
+
+
+/***/ }),
+
+/***/ 44272:
+/*!*********************************************************************!*\
+  !*** ./src/app/components/local-player/local-player.component.scss ***!
+  \*********************************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (".list-display {\n  cursor: pointer;\n  max-height: 800px;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImxvY2FsLXBsYXllci5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLGVBQUE7RUFDQSxpQkFBQTtBQUNGIiwiZmlsZSI6ImxvY2FsLXBsYXllci5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5saXN0LWRpc3BsYXkge1xuICBjdXJzb3I6IHBvaW50ZXI7XG4gIG1heC1oZWlnaHQ6IDgwMHB4O1xufSJdfQ== */");
+
+/***/ }),
+
+/***/ 19821:
+/*!***********************************************************************!*\
+  !*** ./src/app/components/stream-client/stream-client.component.scss ***!
+  \***********************************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzdHJlYW0tY2xpZW50LmNvbXBvbmVudC5zY3NzIn0= */");
+
+/***/ }),
+
 /***/ 2610:
 /*!*************************************!*\
   !*** ./src/app/home/home.page.scss ***!
@@ -3588,27 +3605,27 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 79461:
-/*!**********************************************************!*\
-  !*** ./src/app/local-player/local-player.component.scss ***!
-  \**********************************************************/
+/***/ 179:
+/*!***********************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/components/local-player/local-player.component.html ***!
+  \***********************************************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = (".list-display {\n  cursor: pointer;\n  max-height: 800px;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImxvY2FsLXBsYXllci5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLGVBQUE7RUFDQSxpQkFBQTtBQUNGIiwiZmlsZSI6ImxvY2FsLXBsYXllci5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5saXN0LWRpc3BsYXkge1xuICBjdXJzb3I6IHBvaW50ZXI7XG4gIG1heC1oZWlnaHQ6IDgwMHB4O1xufSJdfQ== */");
+/* harmony default export */ __webpack_exports__["default"] = ("<ion-header [translucent]=\"true\" class=\"go-center\">\n  <ion-toolbar>\n    <ion-title>\n      Ruma Music Player\n    </ion-title>\n  </ion-toolbar>\n</ion-header>\n<ion-content class=\"list-display, go-center\">\n  <ion-list *ngFor=\"let track of playlist; let i = index \" [attr.data-index]=\"i\" (click)=\"start(track)\" >\n    <ion-label class=\"list-display\" [color]=\"track == activeTrack ? 'success' : 'gray'\">\n      {{ i +1 }} - {{ track.name }}\n    </ion-label>\n  </ion-list>\n</ion-content>\n<ion-toolbar class=\"go-center\">\n<!-- Seek bar -->\n<ion-range size=\"small\" #range [(ngModel)]=\"progress\" max=\"100\" \n  (touchend)=\"seek()\" (mouseup)=\"seek()\"></ion-range>\n<!-- Back button -->\n<ion-button size=\"small\" fill=\"clear\"  (click)=\"prev()\" > \n  <ion-icon slot=\"icon-only\" name=\"play-skip-back\"  ></ion-icon>\n</ion-button>\n<!-- Play button -->\n<ion-button size=\"large\" fill=\"clear\" (click)=\"togglePlayer(false)\" *ngIf=\"!isPlaying\" > \n  <ion-icon slot=\"icon-only\" name=\"play\"></ion-icon>\n</ion-button>\n<!-- Pause button -->\n<ion-button size=\"large\" fill=\"clear\" (click)=\"togglePlayer(true)\" *ngIf=\"isPlaying\" > \n  <ion-icon slot=\"icon-only\" name=\"pause\"></ion-icon>\n</ion-button>\n<!-- Next button -->\n<ion-button size=\"small\" fill=\"clear\" (click)=\"next()\" > \n  <ion-icon slot=\"icon-only\" name=\"play-skip-forward\"></ion-icon>\n</ion-button>\n</ion-toolbar>");
 
 /***/ }),
 
-/***/ 8756:
-/*!************************************************************!*\
-  !*** ./src/app/stream-client/stream-client.component.scss ***!
-  \************************************************************/
+/***/ 83271:
+/*!*************************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/components/stream-client/stream-client.component.html ***!
+  \*************************************************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzdHJlYW0tY2xpZW50LmNvbXBvbmVudC5zY3NzIn0= */");
+/* harmony default export */ __webpack_exports__["default"] = ("<h3 class=\"go-center\"> Streaming Clients </h3>\n\n  <ion-grid class=\"go-center\">\n    <ion-row>\n      <ion-col>\n        <ion-textarea [(ngModel)]=\"audioURL\" placeholder=\"Paste the link\">\n        </ion-textarea>\n      </ion-col>\n    </ion-row>\n    <ion-row>\n      <ion-col>\n      <ion-button size=\"large\" fill=\"clear\" (click)=\"streamAudio()\" *ngIf=\"!isPlaying\" > \n        <ion-icon slot=\"icon-only\" name=\"play\"></ion-icon>\n      </ion-button>\n      </ion-col>\n    </ion-row>\n  </ion-grid>");
 
 /***/ }),
 
@@ -3620,31 +3637,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<ion-content>\n  <app-local-player></app-local-player>\n</ion-content>\n<ion-content>\n  <app-stream-client></app-stream-client>\n</ion-content>");
-
-/***/ }),
-
-/***/ 47897:
-/*!************************************************************************************************!*\
-  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/local-player/local-player.component.html ***!
-  \************************************************************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<ion-header [translucent]=\"true\" class=\"go-center\">\n  <ion-toolbar>\n    <ion-title>\n      Ruma Music Player\n    </ion-title>\n  </ion-toolbar>\n</ion-header>\n<ion-content class=\"list-display, go-center\">\n  <ion-list *ngFor=\"let track of playlist; let i = index \" [attr.data-index]=\"i\" (click)=\"start(track)\" >\n    <ion-label class=\"list-display\" [color]=\"track == activeTrack ? 'success' : 'gray'\">\n      {{ i +1 }} - {{ track.name }}\n    </ion-label>\n  </ion-list>\n</ion-content>\n<ion-toolbar class=\"go-center\">\n<!-- Seek bar -->\n<ion-range size=\"small\" #range [(ngModel)]=\"progress\" max=\"100\" \n  (touchend)=\"seek()\" (mouseup)=\"seek()\"></ion-range>\n<!-- Back button -->\n<ion-button size=\"small\" fill=\"clear\"  (click)=\"prev()\" > \n  <ion-icon slot=\"icon-only\" name=\"play-skip-back\"  ></ion-icon>\n</ion-button>\n<!-- Play button -->\n<ion-button size=\"large\" fill=\"clear\" (click)=\"togglePlayer(false)\" *ngIf=\"!isPlaying\" > \n  <ion-icon slot=\"icon-only\" name=\"play\"></ion-icon>\n</ion-button>\n<!-- Pause button -->\n<ion-button size=\"large\" fill=\"clear\" (click)=\"togglePlayer(true)\" *ngIf=\"isPlaying\" > \n  <ion-icon slot=\"icon-only\" name=\"pause\"></ion-icon>\n</ion-button>\n<!-- Next button -->\n<ion-button size=\"small\" fill=\"clear\" (click)=\"next()\" > \n  <ion-icon slot=\"icon-only\" name=\"play-skip-forward\"></ion-icon>\n</ion-button>\n</ion-toolbar>");
-
-/***/ }),
-
-/***/ 81354:
-/*!**************************************************************************************************!*\
-  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/stream-client/stream-client.component.html ***!
-  \**************************************************************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<h3 class=\"go-center\"> Streaming Clients </h3>\n\n  <ion-grid class=\"go-center\">\n    <ion-row>\n      <ion-col>\n        <ion-textarea [(ngModel)]=\"audioURL\" placeholder=\"Paste the link\">\n        </ion-textarea>\n      </ion-col>\n    </ion-row>\n    <ion-row>\n      <ion-col>\n        <!-- Play button -->\n      <ion-button size=\"large\" fill=\"clear\" (click)=\"streamAudio(false)\" *ngIf=\"!isPlaying\" > \n        <ion-icon slot=\"icon-only\" name=\"play\"></ion-icon>\n      </ion-button>\n      <!-- Pause button -->\n      <ion-button size=\"large\" fill=\"clear\" (click)=\"streamAudio(true)\" *ngIf=\"isPlaying\" > \n        <ion-icon slot=\"icon-only\" name=\"pause\"></ion-icon>\n      </ion-button>\n      </ion-col>\n    </ion-row>\n  </ion-grid>");
+/* harmony default export */ __webpack_exports__["default"] = ("<!-- <ion-content>\n  <app-local-player></app-local-player>\n</ion-content> -->\n<ion-content>\n  <app-stream-client></app-stream-client>\n</ion-content>");
 
 /***/ })
 

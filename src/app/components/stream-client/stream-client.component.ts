@@ -4,7 +4,7 @@ import { StreamingMedia, StreamingAudioOptions } from '@ionic-native/streaming-m
 @Component({
   selector: 'app-stream-client',
   templateUrl: './stream-client.component.html',
-  styleUrls: ['./stream-client.component.scss', '../home/home.page.scss'],
+  styleUrls: ['./stream-client.component.scss', '../../home/home.page.scss'],
 })
 
 
@@ -15,15 +15,8 @@ export class StreamClientComponent implements OnInit {
   ngOnInit() {}
 
   audioURL:string = "";
-  isPlaying:boolean = false;
  
-  streamAudio(play:boolean) {
-   
-    if(this.isPlaying) {
-      this.stream.pauseAudio();
-    } else {
+  streamAudio() {
       this.stream.playAudio(this.audioURL);
-    }
-    this.isPlaying = !play;
   }
 }

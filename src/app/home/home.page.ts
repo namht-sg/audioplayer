@@ -1,4 +1,5 @@
 import { Component} from '@angular/core';
+import { IonTabs } from '@ionic/angular';
 
 @Component({
   selector: 'app-home',
@@ -8,7 +9,7 @@ import { Component} from '@angular/core';
 
 export class HomePage {
 
-  constructor() {}
+  constructor() {console.log("home........")}
 
 
 }

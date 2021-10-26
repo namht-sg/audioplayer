@@ -5,8 +5,8 @@ import { FormsModule } from '@angular/forms';
 import { HomePage } from './home.page';
 
 import { HomePageRoutingModule } from './home-routing.module';
-import { LocalPlayerComponent } from '../local-player/local-player.component';
-import { StreamClientComponent } from '../stream-client/stream-client.component';
+import { LocalPlayerComponent } from '../components/local-player/local-player.component';
+import { StreamClientComponent } from '../components/stream-client/stream-client.component';
 
 @NgModule({
   imports: [

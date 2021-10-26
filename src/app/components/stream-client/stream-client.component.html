@@ -9,13 +9,8 @@
     </ion-row>
     <ion-row>
       <ion-col>
-        <!-- Play button -->
-      <ion-button size="large" fill="clear" (click)="streamAudio(false)" *ngIf="!isPlaying" > 
+      <ion-button size="large" fill="clear" (click)="streamAudio()" *ngIf="!isPlaying" > 
         <ion-icon slot="icon-only" name="play"></ion-icon>
-      </ion-button>
-      <!-- Pause button -->
-      <ion-button size="large" fill="clear" (click)="streamAudio(true)" *ngIf="isPlaying" > 
-        <ion-icon slot="icon-only" name="pause"></ion-icon>
       </ion-button>
       </ion-col>
     </ion-row>

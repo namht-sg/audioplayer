@@ -10,7 +10,7 @@ export interface Track {
 @Component({
   selector: 'app-local-player',
   templateUrl: './local-player.component.html',
-  styleUrls: ['./local-player.component.scss', '../home/home.page.scss'],
+  styleUrls: ['./local-player.component.scss', '../../home/home.page.scss'],
 })
 
 export class LocalPlayerComponent implements OnInit {
